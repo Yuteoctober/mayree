@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import '../css/SocialMediaSection.css';
 import { RESTAURANT_INFO } from '../data/menuData';
+import InstagramEmbed from './InstagramEmbed';
 
 // Image assets
 import crabCurryImg from '../assets/picture/southern_crab_curry.jpg';
@@ -52,83 +53,54 @@ function SocialMediaSection() {
 
   const socialReels = [
     {
-      id: 'reel-1',
+      id: 'reel-embed-1',
       platform: 'instagram',
-      image: crabCurryImg,
-      title: 'Gaeng Pu Bai Cha Plu',
-      caption: 'Fresh yellow turmeric, wild betel leaves & colossal jumbo lump crab pounded fresh daily in heavy stone mortars.',
-      stat: '16.4k views',
-      duration: '0:38',
-      statIcon: 'eye',
+      reelId: 'Dc7UeGVPG9d',
+      url: 'https://www.instagram.com/reel/Dc7UeGVPG9d/',
+      title: 'Official MayRee Reel',
       tag: '@mayreenyc',
-      url: RESTAURANT_INFO.instagram,
-      dishTag: 'Signature Crab Curry'
     },
     {
-      id: 'reel-2',
-      platform: 'tiktok',
-      image: cocktailImg,
-      title: 'Siam Dusk Cocktail Ritual',
-      caption: 'Butterfly pea gin, charred lemongrass cordial, and 24k gold leaf poured tableside in the East Village.',
-      stat: '118.4k views',
-      duration: '0:45',
-      statIcon: 'play',
-      tag: '@mayreenyc',
-      url: RESTAURANT_INFO.tiktok,
-      dishTag: 'Bespoke Mixology'
-    },
-    {
-      id: 'reel-3',
+      id: 'reel-embed-2',
       platform: 'instagram',
-      image: shortRibImg,
-      title: '48-Hour Massaman Short Rib',
-      caption: 'Melt-in-your-mouth slow braised prime beef under roasted shallots, warm cardamom, and toasted peanuts.',
-      stat: '3,840 likes',
-      duration: '0:32',
-      statIcon: 'heart',
+      reelId: 'C0LotctOVE6',
+      url: 'https://www.instagram.com/reel/C0LotctOVE6/',
+      title: 'Official MayRee Reel',
       tag: '@mayreenyc',
-      url: RESTAURANT_INFO.instagram,
-      dishTag: 'Braised Short Rib'
     },
     {
-      id: 'reel-4',
-      platform: 'tiktok',
-      image: bgImg2,
-      title: 'East Village Dining Room Nights',
-      caption: 'POV: Your date night in Manhattan’s Michelin-recognized Southern Thai sanctuary on East 1st Street.',
-      stat: '142k views',
-      duration: '0:28',
-      statIcon: 'play',
-      tag: '@mayreenyc',
-      url: RESTAURANT_INFO.tiktok,
-      dishTag: 'Candlelight Vibe'
-    },
-    {
-      id: 'reel-5',
+      id: 'reel-embed-2',
       platform: 'instagram',
-      image: bgImg3,
-      title: 'Chef Orawan & Phang Nga Roots',
-      caption: 'Soulful culinary heritage from Southern Thailand brought to life with bold, uncompromising flavors.',
-      stat: '2,650 likes',
-      duration: '0:42',
-      statIcon: 'heart',
+      reelId: 'C0LotctOVE6',
+      url: 'https://www.instagram.com/reel/C0LotctOVE6/',
+      title: 'Official MayRee Reel',
       tag: '@mayreenyc',
-      url: RESTAURANT_INFO.instagram,
-      dishTag: 'Chef Heritage'
     },
     {
-      id: 'reel-6',
-      platform: 'tiktok',
-      image: padThaiImg,
-      title: 'Wok Hei Crab Pad Thai',
-      caption: 'Intense wok char, authentic 6-hour tamarind reduction, and wild jumbo tiger prawns wrapped in egg crepe.',
-      stat: '78.5k views',
-      duration: '0:35',
-      statIcon: 'play',
+      id: 'reel-embed-2',
+      platform: 'instagram',
+      reelId: 'C0LotctOVE6',
+      url: 'https://www.instagram.com/reel/C0LotctOVE6/',
+      title: 'Official MayRee Reel',
       tag: '@mayreenyc',
-      url: RESTAURANT_INFO.tiktok,
-      dishTag: 'High-Heat Wok Hei'
-    }
+    },
+    {
+      id: 'reel-embed-2',
+      platform: 'instagram',
+      reelId: 'C0LotctOVE6',
+      url: 'https://www.instagram.com/reel/C0LotctOVE6/',
+      title: 'Official MayRee Reel',
+      tag: '@mayreenyc',
+    },
+    {
+      id: 'reel-embed-2',
+      platform: 'instagram',
+      reelId: 'C0LotctOVE6',
+      url: 'https://www.instagram.com/reel/C0LotctOVE6/',
+      title: 'Official MayRee Reel',
+      tag: '@mayreenyc',
+    },
+    
   ];
 
   const handleRefresh = () => {
@@ -331,76 +303,37 @@ function SocialMediaSection() {
         ) : (
           /* Live Reel Previews Grid (Direct Links - No Popup) */
           <div className="social_reels_grid">
-            {filteredReels.map((reel) => (
-              <a
-                key={reel.id}
-                href={reel.url}
-                target="_blank"
-                rel="noreferrer"
-                className={`social_reel_card ${reel.platform}`}
-                aria-label={`Watch live reel ${reel.title} on ${reel.platform}`}
-                title={`Click to watch live reel directly on ${reel.platform}`}
-              >
-                {/* Simulated Live Reel Playing Bar */}
-                <div className="reel_progress_tracker">
-                  <div className="reel_progress_bar" />
-                </div>
-
-                {/* Reel Media Container */}
-                <div className="social_reel_media">
-                  <img 
-                    src={reel.image} 
-                    alt={reel.title} 
-                    className="social_reel_img" 
-                    loading="lazy" 
-                  />
-
-                  {/* Dark Gradient Scrim for Reel Readability */}
-                  <div className="social_reel_overlay_scrim" />
-
-                  {/* Top Badges */}
-                  <div className="social_reel_top_bar">
-                    <div className={`social_reel_badge ${reel.platform}`}>
-                      {reel.platform === 'instagram' ? <FaInstagram /> : <FaTiktok />}
-                      <span>{reel.tag}</span>
-                    </div>
-
-                    <div className="reel_live_indicator">
-                      <span className="reel_live_beacon" />
-                      <span>LIVE REEL</span>
-                      <div className="reel_sound_wave">
-                        <span /><span /><span />
+            {filteredReels.map((reel) => {
+              if (reel.reelId) {
+                return (
+                  <div
+                    key={reel.id}
+                    className={`social_reel_card social_reel_embed_card ${reel.platform}`}
+                  >
+                    {/* Top Badges: Instagram or TikTok logo on top left */}
+                    <div className="social_reel_top_bar">
+                      <div className={`social_reel_badge ${reel.platform}`}>
+                        
+                        <span>{reel.tag || '@mayreenyc'}</span>
                       </div>
+
                     </div>
-                  </div>
 
-                  {/* Centered Reel Play Icon */}
-                  <div className="social_reel_play_circle">
-                    <FaPlay className="play_triangle" />
-                  </div>
-
-                  {/* Reel Duration / Engagement Pill */}
-                  <div className="social_reel_stats_pill">
-                    {reel.statIcon === 'heart' ? <FaHeart /> : reel.statIcon === 'play' ? <FaPlay /> : <FaEye />}
-                    <span>{reel.stat}</span>
-                    <span className="reel_dot_sep">&bull;</span>
-                    <span>{reel.duration}</span>
-                  </div>
-
-                  {/* Bottom Reel Caption Info (Overlaid) */}
-                  <div className="social_reel_info_overlay">
-                    <span className="social_dish_tag">{reel.dishTag}</span>
-                    <h3 className="social_reel_title">{reel.title}</h3>
-                    <p className="social_reel_caption">{reel.caption}</p>
-                    <div className="social_reel_action_row">
-                      <span className="social_reel_direct_btn">
-                        Watch Live on {reel.platform === 'instagram' ? 'Instagram' : 'TikTok'} &rarr;
+                    <InstagramEmbed url={reel.reelId} />
+                    <div className="social_footer">
+                      <span>
+                        {reel.platform === 'instagram' ? <FaInstagram /> : <FaTiktok />}
                       </span>
+                      <p>
+                        {reel.platform === 'instagram' ? 'Instagram' : 'TikTok'}
+                      </p>
+                      
                     </div>
                   </div>
-                </div>
-              </a>
-            ))}
+                );
+              }
+
+            })}
           </div>
         )}
 
@@ -417,3 +350,4 @@ function SocialMediaSection() {
 }
 
 export default SocialMediaSection;
+
