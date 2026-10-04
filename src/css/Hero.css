@@ -1,0 +1,311 @@
+.hero_minimal_section {
+  position: relative;
+  width: 100%;
+  height: 100svh;
+  min-height: 640px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-color: var(--bg-primary);
+  padding: 0 2rem;
+}
+
+/* Full-bleed background slides with vivid warmth & photographic clarity */
+.hero_bg_layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.hero_bg_slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transform: scale(1.05);
+  filter: brightness(0.98) contrast(1.1) saturate(1.2);
+  transition: opacity 1.8s cubic-bezier(0.16, 1, 0.3, 1), transform 9s cubic-bezier(0.25, 1, 0.5, 1);
+  will-change: transform, opacity;
+}
+
+.hero_bg_slide.active {
+  opacity: 0.9;
+  transform: scale(1.0);
+}
+
+/* Feather-light scrim: open center so the restaurant photography pops, subtle vignette for navbar/footer */
+.hero_scrim {
+  position: absolute;
+  inset: 0;
+  background: 
+    linear-gradient(180deg, rgba(7, 7, 9, 0.65) 0%, rgba(7, 7, 9, 0.05) 30%, rgba(7, 7, 9, 0.22) 70%, #070709 100%),
+    radial-gradient(ellipse 95% 85% at center, rgba(7, 7, 9, 0.04) 0%, rgba(7, 7, 9, 0.45) 80%, rgba(7, 7, 9, 0.9) 100%);
+  pointer-events: none;
+}
+
+/* Pure Minimal Content Body */
+.hero_minimal_content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 840px;
+  margin: auto 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  animation: fadeInHero 1.2s ease-out;
+}
+
+@keyframes fadeInHero {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Minimalist Eyebrow: Thai Crest & Michelin Seal */
+.hero_eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero_thai_crest {
+  font-family: var(--font-display);
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--gold-primary);
+  letter-spacing: 0.15em;
+}
+
+.hero_eyebrow_text {
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  opacity: 0.92;
+}
+
+/* Title & Subtitle */
+.hero_minimal_title {
+  font-size: clamp(4.5rem, 11vw, 8.5rem);
+  font-weight: 300;
+  letter-spacing: 0.26em;
+  color: #ffffff;
+  line-height: 0.95;
+  margin-bottom: 1.25rem;
+  font-family: var(--font-display);
+  text-shadow: 
+    0 2px 15px rgba(0, 0, 0, 0.9),
+    0 6px 35px rgba(0, 0, 0, 0.8),
+    0 14px 60px rgba(0, 0, 0, 0.7);
+  margin-left: 0.13em; /* optical balance for wide letter spacing */
+}
+
+.hero_minimal_sub {
+  font-size: clamp(0.85rem, 1.4vw, 1.05rem);
+  font-weight: 300;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: #ebeae4;
+  margin-bottom: 1.75rem;
+  text-shadow: 0 2px 15px rgba(0, 0, 0, 0.9);
+}
+
+/* Floating Hushed Quote (no box, pure open typography) */
+.hero_minimal_quote {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(1.08rem, 1.8vw, 1.3rem);
+  font-weight: 300;
+  color: #ffffff;
+  max-width: 600px;
+  line-height: 1.65;
+  margin-bottom: 2.75rem;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.95), 0 4px 35px rgba(0, 0, 0, 0.9);
+  padding: 0 1rem;
+}
+
+/* Minimalist Action Buttons */
+.hero_minimal_actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.hero_btn_reserve {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(7, 7, 9, 0.55);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: var(--text-primary);
+  border: 1px solid var(--border-gold);
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 0.9rem 2.6rem;
+  border-radius: var(--radius-sm);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  transition: var(--transition);
+}
+
+.hero_btn_reserve:hover {
+  background: var(--gold-primary);
+  color: #070709;
+  border-color: var(--gold-primary);
+  box-shadow: 0 0 30px var(--gold-glow), 0 4px 20px rgba(0, 0, 0, 0.5);
+  transform: translateY(-2px);
+}
+
+.hero_btn_menu {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  color: var(--text-secondary);
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 0.9rem 0.5rem;
+  transition: var(--transition);
+  position: relative;
+}
+
+.hero_btn_menu::after {
+  content: '';
+  position: absolute;
+  bottom: 6px;
+  left: 0;
+  width: 0%;
+  height: 1px;
+  background: var(--gold-primary);
+  transition: width 0.3s ease;
+}
+
+.hero_btn_menu:hover {
+  color: var(--gold-light);
+  transform: translateX(4px);
+}
+
+.hero_btn_menu:hover::after {
+  width: 100%;
+}
+
+/* Whispering Footer: Minimal indicator lines & Scroll cue */
+.hero_minimal_footer {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 0;
+  width: 100%;
+  padding: 0 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 10;
+  pointer-events: auto;
+}
+
+.hero_slide_indicators {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.hero_indicator_line {
+  width: 28px;
+  height: 1.5px;
+  background: rgba(255, 255, 255, 0.25);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.hero_indicator_line:hover {
+  background: rgba(255, 255, 255, 0.55);
+}
+
+.hero_indicator_line.active {
+  background: var(--gold-primary);
+  width: 44px;
+  box-shadow: 0 0 10px var(--gold-primary);
+}
+
+.hero_scroll_hint {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  transition: color 0.2s ease;
+}
+
+.hero_scroll_hint:hover {
+  color: var(--gold-light);
+}
+
+.hero_scroll_line {
+  display: inline-block;
+  width: 28px;
+  height: 1px;
+  background: var(--border-gold);
+}
+
+@media (max-width: 768px) {
+  .hero_minimal_section {
+    padding: 0 1.25rem;
+  }
+
+  .hero_minimal_title {
+    font-size: 4.2rem;
+    letter-spacing: 0.16em;
+  }
+
+  .hero_minimal_actions {
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .hero_btn_reserve {
+    width: 100%;
+  }
+
+  .hero_btn_menu {
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero_minimal_footer {
+    padding: 0 1.5rem;
+    bottom: 1.75rem;
+  }
+
+  .hero_scroll_hint {
+    display: none;
+  }
+}

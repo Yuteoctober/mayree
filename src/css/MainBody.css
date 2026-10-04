@@ -1,0 +1,137 @@
+.main_body_container {
+    position: relative;
+    width: 100svw;
+    height: 100svh;
+    z-index: 0;
+
+}
+
+
+.main_body_container img {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
+    user-select: none;
+    object-fit: cover;
+    opacity: 0.8;
+    z-index: 0;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+.main_body_container p {
+    position: relative;
+
+}
+
+.main_body_container .body_text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #ebebebf0;
+    z-index: 1;
+    width: 60%;
+    max-width: 700px;
+    height: fit-content;
+    padding: 2rem;
+}
+
+.body_text h1 {
+    font-size: 70px;
+    white-space: pre-wrap;
+}
+
+.slider_dots {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 12px;
+    z-index: 2;
+}
+
+.slider_dots button {
+    width: 6px;
+    height: 6px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.slider_dots button.active {
+    background-color: white;
+    transform: scale(1.2);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0.1;
+    }
+
+    to {
+        opacity: 0.8;
+    }
+}
+
+.slider_arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    color: white;
+    font-size: 24px;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 3;
+    border: none;
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+
+.slider_arrow_left {
+    left: 30px;
+}
+
+.slider_arrow_right {
+    right: 30px;
+}
+
+.slider_arrow:active {
+    transform: translateY(-50%) scale(0.9);
+}
+
+
+@media (max-width: 820px) {
+
+    .body_text h1 {
+        font-size: 2.2rem;
+    }
+
+    .slider_arrow {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+
+    .slider_arrow_left {
+        left: 15px;
+    }
+
+    .slider_arrow_right {
+        right: 15px;
+    }
+}

@@ -1,0 +1,153 @@
+.cocktail_section {
+  position: relative;
+  padding: 8rem 0;
+  background: var(--bg-primary);
+  border-top: 1px solid var(--border-subtle);
+}
+
+.cocktail_editorial_grid {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.cocktail_visual_col {
+  display: flex;
+  flex-direction: column;
+}
+
+.cocktail_photo_frame {
+  width: 100%;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  background: #141418;
+}
+
+.cocktail_feature_photo {
+  width: 100%;
+  height: 520px;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.cocktail_photo_frame:hover .cocktail_feature_photo {
+  transform: scale(1.02);
+}
+
+.cocktail_caption {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: 0.85rem;
+  letter-spacing: 0.02em;
+}
+
+/* Info Column */
+.cocktail_info_col {
+  display: flex;
+  flex-direction: column;
+}
+
+.cocktail_section_title {
+  font-size: clamp(2rem, 3.2vw, 2.7rem);
+  font-weight: 400;
+  margin-bottom: 0.75rem;
+  line-height: 1.2;
+}
+
+.cocktail_section_intro {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  margin-bottom: 2.5rem;
+  font-weight: 300;
+}
+
+.cocktails_minimal_list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.cocktail_minimal_row {
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.cocktail_minimal_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 0.35rem;
+}
+
+.cocktail_minimal_name {
+  font-size: 1.15rem;
+  font-weight: 400;
+  color: #fff;
+}
+
+.cocktail_minimal_thai {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  color: var(--gold-primary);
+  margin-top: 0.15rem;
+}
+
+.cocktail_minimal_price {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  color: var(--gold-light);
+  font-weight: 500;
+}
+
+.cocktail_minimal_notes {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  font-weight: 300;
+}
+
+.cocktail_minimal_footer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.happy_hour_minimal {
+  font-size: 0.82rem;
+  color: var(--gold-light);
+  letter-spacing: 0.04em;
+  background: rgba(197, 160, 89, 0.08);
+  border-left: 2px solid var(--gold-primary);
+  padding: 0.65rem 1rem;
+}
+
+.cocktail_reserve_link {
+  font-size: 0.88rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold-primary);
+  align-self: flex-start;
+  padding: 0;
+  margin-top: 0.5rem;
+}
+
+.cocktail_reserve_link:hover {
+  color: var(--gold-light);
+  text-decoration: underline;
+}
+
+@media (max-width: 900px) {
+  .cocktail_editorial_grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .cocktail_feature_photo {
+    height: 380px;
+  }
+}
