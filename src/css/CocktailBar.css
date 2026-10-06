@@ -1,14 +1,13 @@
 .cocktail_section {
   position: relative;
-  padding: 8rem 0;
-  background: var(--bg-primary);
+  padding: 7rem 0;
   border-top: 1px solid var(--border-subtle);
 }
 
 .cocktail_editorial_grid {
   display: grid;
   grid-template-columns: 1fr 1.15fr;
-  gap: 5rem;
+  gap: 4.5rem;
   align-items: center;
 }
 
@@ -21,7 +20,8 @@
   width: 100%;
   border-radius: var(--radius-sm);
   overflow: hidden;
-  background: #141418;
+  background: var(--bg-surface);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.22);
 }
 
 .cocktail_feature_photo {
@@ -49,7 +49,7 @@
 }
 
 .cocktail_section_title {
-  font-size: clamp(2rem, 3.2vw, 2.7rem);
+  font-size: clamp(1.9rem, 2.8vw, 2.45rem);
   font-weight: 400;
   margin-bottom: 0.75rem;
   line-height: 1.2;
@@ -99,7 +99,7 @@
 .cocktail_minimal_price {
   font-family: var(--font-serif);
   font-size: 1.15rem;
-  color: var(--gold-light);
+  color: var(--text-primary);
   font-weight: 500;
 }
 
@@ -117,12 +117,13 @@
 }
 
 .happy_hour_minimal {
-  font-size: 0.82rem;
-  color: var(--gold-light);
+  font-size: 0.8rem;
+  color: var(--text-secondary);
   letter-spacing: 0.04em;
   background: rgba(197, 160, 89, 0.08);
-  border-left: 2px solid var(--gold-primary);
+  border-left: 1px solid var(--border-gold);
   padding: 0.65rem 1rem;
+  border-radius: var(--radius-md);
 }
 
 .cocktail_reserve_link {

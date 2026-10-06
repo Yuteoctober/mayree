@@ -17,34 +17,40 @@ function CocktailBar({ onOpenReservation }) {
 
   const cocktails = [
     {
-      name: 'Siam Dusk',
-      thai: 'สยามดัสก์',
+      name: 'Matesara',
+      thai: 'เมธัสรา',
+      price: 17,
+      notes: 'Bourbon infused bael, honey syrup, lime juice, topped red wine.',
+    },
+    {
+      name: 'Malai',
+      thai: 'มาลัย',
       price: 19,
-      notes: 'Butterfly pea gin, charred lemongrass cordial, makrut lime, sparkling wine, 24k edible gold.',
+      notes: 'Malibu coconut rum, homemade coconut mixed, pineapple juice, topped Maekhong rum and coconut ice cream.',
     },
     {
-      name: 'Smoked Bird’s Eye Old Fashioned',
-      thai: 'โอลด์แฟชั่นพริกขี้หนู',
-      price: 20,
-      notes: 'Thai chili infused rye whiskey, smoked palm sugar, aromatic bitters, flamed orange oil.',
+      name: 'Morrakot',
+      thai: 'มรกต',
+      price: 17,
+      notes: 'Sake, vodka infused lemongrass, fresh galanga, Kaffir lime leaves, fresh lemongrass, lime juice, coconut milk, palm sugar syrup.',
     },
     {
-      name: 'Bangkok Nights Clarified Punch',
-      thai: 'มิลค์พันช์ใบเตย',
-      price: 19,
-      notes: 'Aged Mekhong rum, roasted pandan cordial, pineapple, clarified with coconut milk.',
+      name: 'Benjawan',
+      thai: 'เบญจวรรณ',
+      price: 17,
+      notes: 'Mezcal, Ancho Reyes chili liqueur, lime juice, agave syrup, yuzu purée.',
     },
     {
-      name: 'Phuket Breeze',
-      thai: 'ภูเก็ตบรีซ',
-      price: 18,
-      notes: 'Blanco tequila, passionfruit puree, sweet Thai basil, agave, roasted chili-lime salt rim.',
+      name: 'Manee',
+      thai: 'มณี',
+      price: 17,
+      notes: 'Gin infused pandan leaf, St. Germain, fresh cucumber, fresh mint, lime juice.',
     },
     {
-      name: 'Golden Lotus (Zero-Proof)',
-      thai: 'บัวทอง ไร้แอลกอฮอล์',
-      price: 14,
-      notes: 'Seedlip Grove botanicals, coconut water, butterfly pea tea, lemongrass, kaffir lime foam.',
+      name: 'Malee',
+      thai: 'มาลี',
+      price: 17,
+      notes: 'Tequila infused hibiscus, Ancho Reyes chili liqueur, lime juice, agave syrup, fresh cilantro, ginger, lemongrass.',
     }
   ];
 
@@ -62,7 +68,7 @@ function CocktailBar({ onOpenReservation }) {
               />
             </div>
             <p className="cocktail_caption">
-              Siam Dusk &bull; Butterfly pea gin, charred lemongrass, and French sparkling wine.
+              Malai &bull; Coconut rum, pineapple, Maekhong rum, and coconut ice cream.
             </p>
           </div>
 
@@ -73,7 +79,7 @@ function CocktailBar({ onOpenReservation }) {
               Botanical Libations &amp; Nocturnal Vibrance
             </h2>
             <p className="cocktail_section_intro">
-              Craft cocktails designed to echo the herbal profiles and aromatic spices of Southern Thailand.
+              Cocktails named after the Twelve Sisters folktale, curated by Sek Saraboon to echo Thai herbal botanicals.
             </p>
 
             <div className="cocktails_minimal_list">
@@ -93,7 +99,7 @@ function CocktailBar({ onOpenReservation }) {
 
             <div className="cocktail_minimal_footer">
               <div className="happy_hour_minimal">
-                <span>Happy Hour &bull; Daily 5:00 PM – 7:00 PM &bull; $12 Cocktails &bull; $9 Selected Wines</span>
+                <span>Happy Hour &bull; Mon–Wed: All Day &bull; Thu–Fri: 12 PM – 8 PM &bull; Sat–Sun: 12 PM – 5 PM &bull; $12 Cocktails &bull; $8 Wines &bull; $5 Singha</span>
               </div>
               <button 
                 className="cocktail_reserve_link" 

@@ -1,7 +1,6 @@
 .reservation_section {
   position: relative;
-  padding: 8rem 0;
-  background: var(--bg-primary);
+  padding: 7rem 0;
   border-top: 1px solid var(--border-subtle);
 }
 
@@ -19,8 +18,8 @@
 
 .reservation_channel_card {
   padding: 3.5rem 3rem;
-  border-radius: var(--radius-sm);
-  background: rgba(18, 18, 22, 0.6);
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.035);
   border: 1px solid var(--border-subtle);
   display: flex;
   flex-direction: column;
@@ -30,14 +29,14 @@
 }
 
 .reservation_channel_card:hover {
-  transform: translateY(-3px);
+  transform: translateY(-2px);
   border-color: var(--border-gold);
 }
 
 .channel_top_icon {
   width: 56px;
   height: 56px;
-  border-radius: 50%;
+  border-radius: var(--radius-lg);
   background: rgba(197, 160, 89, 0.1);
   display: flex;
   align-items: center;
@@ -56,7 +55,7 @@
 }
 
 .channel_title {
-  font-size: 1.6rem;
+  font-size: 1.45rem;
   font-weight: 400;
   color: #fff;
   margin-bottom: 0.75rem;
@@ -93,8 +92,8 @@
   grid-template-columns: 1fr 1fr;
   gap: 3rem;
   padding: 2.5rem 3rem;
-  border-radius: var(--radius-sm);
-  background: rgba(14, 14, 17, 0.7);
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.03);
   border: 1px solid var(--border-subtle);
 }
 

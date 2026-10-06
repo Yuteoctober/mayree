@@ -1,6 +1,6 @@
 import '../css/MichelinStory.css';
-import micelAward from '../assets/picture/micel2.png';
-import crabCurryPhoto from '../assets/picture/southern_crab_curry.jpg';
+import michelinGuideLogo from '../assets/picture/michelin_guide_logo.svg';
+import mayree from '../assets/picture/mayree.jpg';
 
 function MichelinStory() {
   const scrollTo = (id) => {
@@ -24,16 +24,22 @@ function MichelinStory() {
           <div className="story_visual_col">
             <div className="story_main_img_wrap">
               <img 
-                src={crabCurryPhoto} 
+                src={mayree} 
                 alt="Southern Thai Culinary Craft" 
                 className="story_main_photo" 
               />
               <div className="story_michelin_floating_badge">
-                <img src={micelAward} alt="Michelin Guide" className="story_micel_img" />
+                <span className="story_michelin_mark">
+                  <img src={michelinGuideLogo} alt="Michelin Guide" className="story_michelin_logo" />
+                </span>
+                <span className="story_michelin_copy">
+                  <span>Michelin Guide</span>
+                  <strong>Selected</strong>
+                </span>
               </div>
             </div>
             <p className="story_img_caption">
-              Gaeng Pu Bai Cha Plu &bull; Hand-ground yellow turmeric, betel leaves, and lump crab.
+              Mayree &bull; character inspired by the Thai folk tale Nang Sip Song (นางสิบสอง / The Twelve Sisters)
             </p>
           </div>
 
@@ -41,19 +47,19 @@ function MichelinStory() {
           <div className="story_narrative_col">
             <span className="section-tag">Culinary Heritage &bull; East Village</span>
             <h2 className="story_title">
-              Authentic Southern Thai, Crafted Without Compromise.
+              Bold Southern Thai, Inspired by the Twelve Sisters.
             </h2>
 
             <p className="story_lead">
-              Rooted in the coastal provinces of Southern Thailand and brought to life in Manhattan’s East Village, MayRee celebrates a culinary tradition renowned for its fiery depth and unapologetic soul.
+              Inspired by the Thai folktale &ldquo;Twelve Sisters,&rdquo; MayRee brings the bold, fiery flavors of Southern Thailand to NYC&rsquo;s East Village in a cozy, charming space.
             </p>
 
             <p className="story_body">
-              Unlike the sweeter curries of Central Bangkok, Southern Thai cooking is defined by freshly pounded turmeric root, wild betel leaves (Bai Cha Plu), makrut lime, and hand-pressed coconut cream. Every morning, our kitchen pulverizes fresh ingredients in heavy stone mortars to preserve the essential aromatics that define authentic Southern Siam cuisine.
+              The compact menu showcases vibrant dishes like spicy Kua Kling pork curry and delicate Park Mor rice crepe dumplings, alongside classics like Pad Thai and Tom Yum. Bespoke cocktails named for the folktale&rsquo;s sisters complete the experience.
             </p>
 
             <blockquote className="story_inspector_quote">
-              &ldquo;MayRee Thai Kitchen delivers the genuine pulse of Southern Thailand to East Village diners. The curries are rich with hand-pressed coconut cream and fiery depth, complemented by a cocktail program that stands shoulder to shoulder with the food.&rdquo;
+              &ldquo;Chef/Owner Orawan Sawangphol tells us a story of southern Thai cooking at Mayree, named for a character from the Thai folktale, Twelve Sisters. Spice levels are far from timid, and all of the dishes showcase great personality. Sek Saraboon runs the serious cocktail program, while all of the creative sips are named for Mayree&rsquo;s sisters.&rdquo;
               <cite>&mdash; The Michelin Guide</cite>
             </blockquote>
 

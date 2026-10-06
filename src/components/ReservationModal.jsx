@@ -53,13 +53,13 @@ function ReservationModal({ isOpen, onClose }) {
           onClick={onClose}
           aria-label="Close reservation modal"
         >
-          <FaXmark />
+          <FaXmark className="close_model" />
         </button>
 
         {/* Modal Header */}
         <div className="res_modal_header text-center">
           <span className="res_modal_tag">
-            <FaAward className="gold" />
+            <FaAward className="res_modal_tag_icon" />
             Michelin Recognized &bull; East Village NYC
           </span>
           <h2 className="res_modal_title">
@@ -110,8 +110,7 @@ function ReservationModal({ isOpen, onClose }) {
               <a 
                 href={mailtoLink} 
                 className="btn-outline-gold res_channel_btn"
-              >
-                <FaEnvelope /> Email {RESTAURANT_INFO.email}
+              > Email:  {RESTAURANT_INFO.email}
               </a>
               <div className="res_channel_meta">
                 <FaCalendarCheck className="gold" /> Direct response within 2–4 hours

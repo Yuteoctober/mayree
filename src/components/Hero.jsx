@@ -2,9 +2,9 @@ import { useState, useEffect, useRef } from 'react';
 import '../css/Hero.css';
 
 import mayreeBg from '../assets/picture/mayree_bg.png';
-import mayreeBg2 from '../assets/picture/mayree_bg2.png';
-import mayreeBg3 from '../assets/picture/mayree_bg3.png';
-import mayreeBg4 from '../assets/picture/mayree_bg4.png';
+import mayreeBg2 from '../assets/picture/dishes/park_mor.jpg';
+import mayreeBg3 from '../assets/picture/dishes/tom_kha_gai.jpg';
+import mayreeBg4 from '../assets/picture/dishes/grilled_shrimp_mango_salad.jpg';
 
 const SLIDE_DURATION = 7000;
 
@@ -12,19 +12,23 @@ function Hero({ onOpenReservation }) {
   const slides = [
     {
       image: mayreeBg,
-      quote: "Hand-pounded curries, fresh coastal seafood, and unapologetic Southern Thai heat.",
+      label: "Southern Thai",
+      quote: "Authentic Southern Thai and bespoke cocktails in the heart of East Village NYC.",
     },
     {
       image: mayreeBg2,
-      quote: "Authentic Siam spices pulverized daily in heavy granite mortars.",
+      label: "Bold Flavor",
+      quote: "Traditional recipes, fresh high-quality ingredients, and bold, spicy dishes.",
     },
     {
       image: mayreeBg3,
-      quote: "An intimate cocktail sanctuary inspired by the botanical pulse of Bangkok.",
+      label: "Twelve Sisters",
+      quote: "Inspired by the Thai folktale Twelve Sisters, with cocktails named for MayRee’s sisters.",
     },
     {
       image: mayreeBg4,
-      quote: "Recognized by the Michelin Guide for uncompromised culinary tradition.",
+      label: "Guide Selected",
+      quote: "Recognized by the Michelin Guide for Southern Thai cooking with great personality.",
     }
   ];
 
@@ -73,44 +77,51 @@ function Hero({ onOpenReservation }) {
         <div className="hero_scrim" />
       </div>
 
-      {/* Pure Minimalist Hero Body */}
+      {/* Editorial Hero Body */}
       <div className="hero_minimal_content">
-        {/* Subtle Thai Crest & Michelin Seal */}
-        <div className="hero_eyebrow">
-          <span className="hero_thai_crest">เมรี</span>
-          <span className="hero_eyebrow_text">Michelin Guide Selected &bull; East Village</span>
+        <div className="hero_award_pill">
+          <span className="hero_award_dot" />
+          <span>Michelin Guide Selected</span>
+          <span className="hero_award_divider" />
+          <span>East Village</span>
         </div>
 
-        {/* Brand Title */}
-        <h1 className="hero_minimal_title">
-          MAYREE
-        </h1>
+        <div className="hero_title_group">
+          <span className="hero_thai_crest">เมรี</span>
+          <h1 className="hero_minimal_title">MAYREE</h1>
+        </div>
 
-        {/* Subtitle */}
-        <p className="hero_minimal_sub">
-          Southern Thai Kitchen &amp; Bespoke Bar
-        </p>
+        <div className="hero_subline">
+          <span />
+          <p>Authentic Southern Thai &amp; Bespoke Cocktails</p>
+        </div>
 
-        {/* Floating Hushed Quote */}
         <p className="hero_minimal_quote">
-          &ldquo;{slides[currentIndex].quote}&rdquo;
+          {slides[currentIndex].quote}
         </p>
 
-        {/* Minimal Actions: Pure Understated Luxury */}
         <div className="hero_minimal_actions">
-          <button 
+          <button
             className="hero_btn_reserve"
             onClick={onOpenReservation || (() => scrollTo('reservations'))}
           >
             Reserve Table
           </button>
-          <button 
+          <button
             className="hero_btn_menu"
             onClick={() => scrollTo('menu')}
           >
             View Menu &rarr;
           </button>
         </div>
+      </div>
+
+      <div className="hero_chapter_card" aria-live="polite">
+        <span className="hero_chapter_count">
+          {String(currentIndex + 1).padStart(2, '0')} / {String(slides.length).padStart(2, '0')}
+        </span>
+        <strong>{slides[currentIndex].label}</strong>
+        <span className="hero_chapter_line" />
       </div>
 
       {/* Whispering Footer: Minimal indicator lines & Scroll cue */}

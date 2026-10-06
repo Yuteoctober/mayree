@@ -4,7 +4,7 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(5, 5, 8, 0.84);
+  background: rgba(18, 16, 13, 0.78);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
   z-index: 3000;
@@ -26,9 +26,9 @@
   max-width: 620px;
   max-height: 90vh;
   overflow-y: auto;
-  background: #0d0d12;
+  background: var(--bg-secondary);
   border: 1px solid var(--border-gold);
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-lg);
   padding: 2.75rem 2.4rem;
   box-shadow: 0 25px 60px rgba(0, 0, 0, 0.75), 0 0 35px var(--gold-glow);
   animation: modalScaleUp 0.35s cubic-bezier(0.16, 1, 0.3, 1);
@@ -47,8 +47,8 @@
 
 .res_modal_close_btn {
   position: absolute;
-  top: 1.25rem;
-  right: 1.25rem;
+  top: 2px;
+  right: 2px;
   font-size: 1.3rem;
   color: var(--text-muted);
   transition: var(--transition);
@@ -128,20 +128,20 @@
   align-items: flex-start;
   gap: 1.25rem;
   padding: 1.5rem;
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius-lg);
   border: 1px solid var(--border-subtle);
   transition: var(--transition);
 }
 
 .res_channel_box:hover {
   border-color: var(--border-hover);
-  background: rgba(22, 22, 28, 0.8);
+  background: rgba(255, 255, 255, 0.035);
 }
 
 .res_channel_icon_wrap {
   width: 44px;
   height: 44px;
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius-md);
   background: rgba(212, 175, 55, 0.1);
   border: 1px solid var(--border-gold);
   display: flex;
@@ -221,6 +221,8 @@
   color: var(--gold-light);
 }
 
+
+
 @media (max-width: 600px) {
   .res_modal_card {
     padding: 2rem 1.25rem;
@@ -229,5 +231,18 @@
   .res_channel_box {
     flex-direction: column;
     gap: 1rem;
+  }
+
+  .mail_click {
+    display: none;
+  }
+
+  .res_modal_tag_icon {
+    display: none;
+  }
+
+  .res_modal_tag {
+    padding: 0.35rem 0.75rem;
+    font-size: 9px;
   }
 }

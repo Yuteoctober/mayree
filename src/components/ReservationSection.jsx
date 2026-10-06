@@ -78,7 +78,7 @@ function ReservationSection() {
               href={reservationEmailTemplate} 
               className="btn-outline-gold channel_main_action"
             >
-              <FaEnvelope /> Email {RESTAURANT_INFO.email}
+              Email: {RESTAURANT_INFO.email}
             </a>
 
             <div className="channel_info_meta">

@@ -2,9 +2,9 @@ import { useState, useEffect } from 'react';
 import '../css/MainBody.css';
 
 import mayreeBg from '../assets/picture/mayree_bg.png';
-import mayreeBg2 from '../assets/picture/mayree_bg2.png';
-import mayreeBg3 from '../assets/picture/mayree_bg3.png';
-import mayreeBg4 from '../assets/picture/mayree_bg4.png';
+import mayreeBg2 from '../assets/picture/dishes/park_mor.jpg';
+import mayreeBg3 from '../assets/picture/dishes/tom_kha_gai.jpg';
+import mayreeBg4 from '../assets/picture/dishes/grilled_shrimp_mango_salad.jpg';
 
 function MainBodybg() {
   const images = [mayreeBg, mayreeBg2, mayreeBg3, mayreeBg4];

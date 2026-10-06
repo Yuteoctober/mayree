@@ -1,7 +1,6 @@
 .location_section {
   position: relative;
   padding: 8rem 0;
-  background: var(--bg-primary);
   border-top: 1px solid var(--border-subtle);
 }
 
@@ -102,9 +101,9 @@
 .location_map_col {
   display: flex;
   flex-direction: column;
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius-lg);
   overflow: hidden;
-  background: #111115;
+  background: var(--bg-surface);
   border: 1px solid var(--border-subtle);
   min-height: 480px;
 }
@@ -114,7 +113,7 @@
   width: 100%;
   min-height: 380px;
   position: relative;
-  background: #1a1a20;
+  background: var(--bg-surface);
 }
 
 .google_map_embed {
@@ -132,7 +131,7 @@
 
 .map_bottom_caption {
   padding: 1.25rem 1.5rem;
-  background: rgba(14, 14, 17, 0.95);
+  background: rgba(32, 29, 24, 0.95);
   border-top: 1px solid var(--border-subtle);
   display: flex;
   align-items: center;

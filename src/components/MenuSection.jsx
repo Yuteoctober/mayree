@@ -36,7 +36,7 @@ function MenuSection({ onOpenReservation }) {
             The MayRee Menu
           </h2>
           <p className="section-desc">
-            Traditional Southern Thai recipes, hand-pounded pastes, fresh coastal seafood, and bespoke craft cocktails.
+            Signature Southern curries, classic Thai dishes like Pad Thai and Tom Yum, flavorful noodles, and craft cocktails.
           </p>
         </div>
 

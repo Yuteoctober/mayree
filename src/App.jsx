@@ -12,6 +12,7 @@ import LocationHours from './components/LocationHours';
 import Footer from './components/Footer';
 import ReservationModal from './components/ReservationModal';
 import SocialMediaSection from './components/SocialMediaSection';
+import ScrollReveal from './components/ScrollReveal';
 
 // Icons
 import { FaPhone, FaCalendarCheck } from 'react-icons/fa6';
@@ -40,6 +41,8 @@ function App() {
 
   return (
     <div className="app-wrapper">
+      <ScrollReveal />
+
       {/* Navigation Bar */}
       <Navbar onOpenReservation={openReservation} />
 
@@ -50,18 +53,23 @@ function App() {
 
         {/* 2. Michelin Story & Southern Thai Heritage */}
         <MichelinStory />
+        <div className="section_divider" aria-hidden="true" />
 
         {/* 3. Interactive Full Menu Showcase */}
         <MenuSection onOpenReservation={openReservation} />
+        <div className="section_divider" aria-hidden="true" />
 
         {/* 4. Bespoke Cocktails & East Village Bar */}
         <CocktailBar onOpenReservation={openReservation} />
+        <div className="section_divider" aria-hidden="true" />
 
         {/* 5. Phone & Email Table Reservation Inquiries */}
         <ReservationSection />
+        <div className="section_divider" aria-hidden="true" />
 
         {/* 6. Instagram & TikTok Visual Content Previews */}
         <SocialMediaSection />
+        <div className="section_divider" aria-hidden="true" />
 
         {/* 7. Hours, Location, Contact & VIP Club */}
         <LocationHours />
@@ -83,13 +91,13 @@ function App() {
             href={`tel:${RESTAURANT_INFO.phone.replace(/[^0-9]/g, '')}`}
             className="floating_btn_call"
           >
-            <FaPhone /> Call {RESTAURANT_INFO.phone}
+            <FaPhone /> Call
           </a>
           <button
             className="floating_btn_reserve"
             onClick={openReservation}
           >
-            <FaCalendarCheck /> Reserve Table
+            <FaCalendarCheck /> Reserve
           </button>
         </aside>
       )}

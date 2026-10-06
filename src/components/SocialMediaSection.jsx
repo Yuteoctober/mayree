@@ -184,19 +184,19 @@ function SocialMediaSection() {
                 className={`social_filter_tab ${activeFilter === 'all' && !liveStreamActive ? 'active' : ''}`}
                 onClick={() => { setActiveFilter('all'); setLiveStreamActive(false); }}
               >
-                All Live Reels
+                All
               </button>
               <button 
                 className={`social_filter_tab ${activeFilter === 'instagram' && !liveStreamActive ? 'active' : ''}`}
                 onClick={() => { setActiveFilter('instagram'); setLiveStreamActive(false); }}
               >
-                <FaInstagram /> Instagram Reels
+                <FaInstagram  /> Instagram
               </button>
               <button 
                 className={`social_filter_tab ${activeFilter === 'tiktok' && !liveStreamActive ? 'active' : ''}`}
                 onClick={() => { setActiveFilter('tiktok'); setLiveStreamActive(false); }}
               >
-                <FaTiktok /> TikTok Streams
+                <FaTiktok /> TikTok
               </button>
             </div>
 

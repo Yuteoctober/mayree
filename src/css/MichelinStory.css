@@ -1,7 +1,6 @@
 .story_section {
   position: relative;
-  padding: 8rem 0;
-  background: var(--bg-primary);
+  padding: 7rem 0;
   border-top: 1px solid var(--border-subtle);
   overflow: hidden;
 }
@@ -9,7 +8,7 @@
 .story_editorial_grid {
   display: grid;
   grid-template-columns: 1fr 1.15fr;
-  gap: 5.5rem;
+  gap: 5rem;
   align-items: center;
 }
 
@@ -24,8 +23,8 @@
   width: 100%;
   border-radius: var(--radius-sm);
   overflow: hidden;
-  background: #15151a;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+  background: var(--bg-surface);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.24);
   border: 1px solid var(--border-subtle);
 }
 
@@ -33,6 +32,7 @@
   width: 100%;
   height: 540px;
   object-fit: cover;
+  object-position: top;
   transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -42,21 +42,57 @@
 
 .story_michelin_floating_badge {
   position: absolute;
-  bottom: 1.5rem;
-  right: 1.5rem;
-  background: rgba(8, 8, 11, 0.9);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  padding: 0.9rem 1.35rem;
-  border-radius: var(--radius-sm);
-  border: 1px solid var(--border-gold);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  bottom: 1.25rem;
+  right: 1.25rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.58rem;
+  background: rgba(41, 37, 31, 0.78);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  padding: 0.48rem 0.72rem 0.48rem 0.48rem;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(250, 240, 215, 0.22);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.24);
 }
 
-.story_micel_img {
-  width: 110px;
-  height: auto;
-  opacity: 0.95;
+.story_michelin_mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 28px;
+  flex-shrink: 0;
+}
+
+.story_michelin_logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.story_michelin_copy {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  line-height: 1;
+  padding-right: 0.15rem;
+}
+
+.story_michelin_copy span {
+  color: var(--gold-light);
+  font-size: 0.54rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.story_michelin_copy strong {
+  color: var(--cream-light);
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .story_img_caption {
@@ -75,7 +111,7 @@
 }
 
 .story_title {
-  font-size: clamp(2.2rem, 3.6vw, 3.2rem);
+  font-size: clamp(2rem, 3vw, 2.75rem);
   font-family: var(--font-display);
   font-weight: 400;
   margin-bottom: 1.5rem;
@@ -84,7 +120,7 @@
 }
 
 .story_lead {
-  font-size: 1.12rem;
+  font-size: 1.04rem;
   color: var(--cream-light);
   line-height: 1.7;
   margin-bottom: 1.25rem;
@@ -101,16 +137,16 @@
 
 /* Quote Frame */
 .story_inspector_quote {
-  border-left: 2px solid var(--gold-primary);
-  background: rgba(255, 255, 255, 0.02);
-  padding: 1.5rem 1.8rem;
+  border-left: 1px solid var(--border-gold);
+  background: rgba(255, 255, 255, 0.018);
+  padding: 1.35rem 1.6rem;
   margin: 1.5rem 0 2.5rem;
   font-family: var(--font-display);
   font-style: italic;
-  font-size: 1.15rem;
+  font-size: 1.04rem;
   line-height: 1.6;
   color: var(--text-primary);
-  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  border-radius: var(--radius-md);
 }
 
 .story_inspector_quote cite {
@@ -157,5 +193,12 @@
 
   .story_main_photo {
     height: 380px;
+  }
+
+  .story_michelin_floating_badge {
+    bottom: 1rem;
+    right: 1rem;
+    transform: scale(0.9);
+    transform-origin: bottom right;
   }
 }

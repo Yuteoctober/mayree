@@ -209,11 +209,6 @@ function Navbar({ onOpenReservation }) {
                 </a>
               </div>
             </div>
-
-            <div className="mobile_drawer_footer">
-              <p>{RESTAURANT_INFO.address}</p>
-              <p>Lunch &amp; Dinner Daily &bull; Walk-Ins Welcomed</p>
-            </div>
           </div>
         </div>
       )}
